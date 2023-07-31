@@ -7,8 +7,8 @@ const validateBody = schema => {
             next(RequestError(400, error.message));
         }
         next();
-    }
+    };
     return func;
-}
+};
 
 module.exports = validateBody;

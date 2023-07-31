@@ -1,8 +1,8 @@
 const { RequestError } = require('../helpers');
-const contacts = require('../models/contacts');
+const { Contact } = require('../models/contacts');
 
 async function getAll(req, res) {
-    const result = await contacts.listContacts();
+    const result = await Contact.find({}, '-createdAt -updatedAt');
 
     if (!result) {
         throw RequestError(404, 'Not found');
