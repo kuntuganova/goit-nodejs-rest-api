@@ -1,5 +1,5 @@
 const { RequestError } = require('../helpers');
-const { Contact } = require('../models/contacts');
+const { Contact } = require('../models/contact');
 
 async function updateFavorite(req, res, next) {
     const { contactId } = req.params;
