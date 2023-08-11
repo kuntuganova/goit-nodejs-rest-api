@@ -1,5 +1,5 @@
-const { RequestError } = require('../helpers');
-const { Contact } = require('../models/contact');
+const { RequestError } = require('../../helpers');
+const { Contact } = require('../../models/contact');
 
 async function getAll(req, res) {
     const result = await Contact.find({}, '-createdAt -updatedAt');
