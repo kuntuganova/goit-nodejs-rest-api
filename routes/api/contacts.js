@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const ctrl = require('../../controllers/index');
-const { validateBody, ctrlWrapper } = require('../../helpers/index');
+const ctrl = require('../../controllers/contacts/index');
+const ctrlWrapper = require('../../helpers/ctrlWrapper');
+const validateBody = require('../../middlewares/validateBody');
 const addSchema = require('../../schemas/contacts');
 
 router.get('/', ctrlWrapper(ctrl.getAll));
